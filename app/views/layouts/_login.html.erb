@@ -1,7 +1,7 @@
 
 
 <% if logged_in? %>
-  <%= link_to 'Logout', logout_path, method: :delete %> |
+  <%= link_to (current_user.admin? ? 'Logout (Admin)' : 'Logout'), logout_path, method: :delete %> |
   <%= link_to 'create new article', new_article_path %> |
   <%= link_to 'View your profile', user_path(current_user)%> |
   <%= link_to 'Edit your profile', edit_user_path(current_user)%>
