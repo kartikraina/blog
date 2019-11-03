@@ -1,0 +1,17 @@
+<h1 align="center">User Login form</h1>
+
+<%= form_for :session, url: login_path do |f| %>
+  <p>
+    <%= f.label 'E-mail' %>
+    <%= f.email_field :email, placeholder: 'Enter email' %>
+  </p>
+  <p>
+  </p>
+    <%= f.label 'Password'%>
+    <%= f.password_field :password, autocomplete: "off"%>
+  <p>
+    <%= f.submit 'Login'%>
+  </p>
+<%end%>
+
+[ <%= link_to "Cancel request and return to articles listing", articles_path %>]
